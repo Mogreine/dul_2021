@@ -21,7 +21,7 @@ class SSDataset:
 
 def q12_results(q):
     train_data, test_data = get_data('CIFAR10')
-    train_data, test_data = SSDataset(train_data), SSDataset(test_data)
+    train_data, test_data = SSDataset(train_data), SSDataset(test_data, train=False)
 
     losses, accs = q(train_data, test_data)
 
